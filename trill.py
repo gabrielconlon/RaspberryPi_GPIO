@@ -1,17 +1,18 @@
-#!usr/bin/env python3
+#!/usr/bin/env python3
 
 from gpiozero import Buzzer
 from time import sleep
 
-bz = Buzzer(17)
+bz = Buzzer(4)
 
 def trill():
-    repeat = 100000
+	repeat = 10000
     
-    while repeat > 0:
-        # print(f"Seconds remaining: {repeat * 2}")
-        bz.on()
-        bz.off()
-        repeat -= 1
+	while repeat > 0:
+		# print(f"Seconds remaining: {repeat}")
+		bz.on()
+		# sleep(1)
+		bz.off()
+		repeat -= 1
 
 trill()
