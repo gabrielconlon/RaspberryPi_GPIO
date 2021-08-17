@@ -30,12 +30,13 @@ def greenAmberRed():
 
 programSpeed = int(input("Choose 'fast'(1 second intervals) or 'slow (5 second intervals): "))
 
-repeat = 2
+repeat = 100
 
 while repeat > 0:
 	for led in leds:
 		led.off()
 		clicker()
+	clicker()
 	ledGreen.on()
 	clicker()
 	sleep(5)
@@ -43,3 +44,4 @@ while repeat > 0:
 	clicker()
 	sleep(3)
 	repeat -= 1
+	print(f"{repeat} Iterations remaining.")
